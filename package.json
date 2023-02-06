@@ -4,7 +4,7 @@
   "description": "",
   "main": "build/server.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm prisma migrate deploy",
     "dev": "cross-env DEBUG=prisma-books:* nodemon server.ts",
     "debug": "cross-env DEBUG=prisma-books:* nodemon --inspect server.ts",
     "start": "node build/server.js",
