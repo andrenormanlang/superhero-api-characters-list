@@ -1,12 +1,5 @@
 import express from "express"
-import authors from './authors'
-import books from './books'
-import profile from './profile'
-import publishers from './publishers'
-import { register } from '../controllers/register_controller'
-import { createUserRules } from '../validations/user_rules'
-import { basic } from "../middlewares/auth/basic"
-
+import characters from './characters'
 
 // instantiate a new router
 const router = express.Router()
@@ -21,28 +14,15 @@ router.get('/', (req, res) => {
 })
 
 /**
- * /authors
+ * [EXAMPLE] /resource
  */
-router.use('/authors', authors)
+// router.use('/resource', resource)
+
 
 /**
- * /books
+ * /characters
  */
-router.use('/books', books)
+router.use('/characters', characters )
 
-/**
- * /profile
- */
-router.use('/profile', basic, profile)
-
-/**
- * /publishers
- */
-router.use('/publishers', publishers)
-
-/**
- * /register
- */
-router.post('/register', createUserRules, register)
 
 export default router
