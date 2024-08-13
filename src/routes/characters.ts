@@ -2,7 +2,8 @@
 import express from 'express'
 import {body} from 'express-validator'
 import {index, show, update, destroy, template} from '../controllers/characters_controller'
-import { createCharacterRules } from "../validations/character_rules";
+import { createCharacterRules } from '../validations/character_rules'
+
 
 const router = express.Router()
 
